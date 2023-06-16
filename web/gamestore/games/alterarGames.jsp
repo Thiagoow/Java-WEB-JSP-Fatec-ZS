@@ -13,10 +13,10 @@
 
 <html>
     <%@include file="../../inc/materalizeWeb.inc" %>
-    <title>ALTERAR - Games</title>
+    <title>ALTERAR - GAMES</title>
     <body>
        <div class="container"/>
-       <h1>ALTERAR Games</h1>
+       <h1>ALTERAR GAMES</h1>
         <form name="alterarGames" action="validaAlterarGames.jsp" method="post">
             Nome: <input type="text" name="Nome" value="<%=ins.getName()%>"> <br>
             Valor: <input type="number" name="VALOR" value="<%=ins.getValor()%>"> <br>
