@@ -1,13 +1,13 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="gamestore.model.bean.Clientes"%>
+<%@page import="gamestore.model.bean.Clients"%>
 <%@page import="gamestore.controller.ClientsController"%>
 
 <%
     String cod = request.getParameter("ID");
     int id = Integer.parseInt(cod);
-    Clients cli = new Clientes(id);
+    Clients cli = new Clients(id);
     ControllerClients pesCont = new ClientsController();
-    cli = pesCont.buscar(cli);
+    cli = pesCont.search(cli);
     String pbusca = request.getParameter("PBUSCA");
 %>
 
