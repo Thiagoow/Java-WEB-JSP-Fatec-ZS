@@ -8,7 +8,7 @@
     Cliente usuEntrada = new Cliente(login,senha);
     ControllerCliente usucont = new ControllerCliente();
     Cliente usuSaida = usucont.validarWeb(usuEntrada);
-    session.setAttribute("UsuarioLogado",usuSaida);
+    session.setAttribute("ClientLogged",usuSaida);
 %>
 
 <!DOCTYPE html>

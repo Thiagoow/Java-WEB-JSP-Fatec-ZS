@@ -5,8 +5,7 @@ import="gamestore.controller.ControllerClientes"%> <% String nome =
 request.getParameter("NOME"); Clientes cli = new Clientes(nome);
 ControllerClientes clicont = new ControllerClientes(); List<Clientes>
   clie = clicont.listar(cli); Usuario usuLogado = (Usuario)
-  session.getAttribute("UsuarioLogado"); String url = "PBUSCA=" + nome+"&ID=";
-  %>
+  session.getAttribute("ClientLogged"); String url = "PBUSCA=" + nome+"&ID="; %>
 
   <html>
     <%@include file="../../inc/materalizeWeb.inc" %>
