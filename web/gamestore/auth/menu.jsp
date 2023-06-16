@@ -25,7 +25,7 @@
     <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown2">Manter Compras</a>
     <a class="dropdown-button btn" data-beloworigin="true" href="#" data-activates="dropdown3">Manter Games</a>
 
-    <% if (usuSaida.getTipo().equals("ADM")) { %>
+    <% if (usuSaida.getType().equals("ADM")) { %>
     <!-- Dropdown1 Structure -->
     <ul id="dropdown1" class="dropdown-content">
         <li><a href="../Clients/inserirClientes.jsp"> InserirClientes</a></li>
@@ -37,7 +37,7 @@
     </ul>
     <% } %>
 
-    <% if (usuSaida.getTipo().equals("ADM")) { %>
+    <% if (usuSaida.getType().equals("ADM")) { %>
     <!-- Dropdown2 Structure -->
     <ul id="dropdown3" class="dropdown-content">
         <li><a href="../compras/inserirRelacaoCompras.jsp"> InserirCompras</a></li>
@@ -50,7 +50,7 @@
     <% } %>
 
     <!-- Dropdown3 Games -->
-    <% if (usuSaida.getTipo().equals("ADM")) { %>
+    <% if (usuSaida.getType().equals("ADM")) { %>
     <!-- Dropdown3 Structure -->
     <ul id="dropdown4" class="dropdown-content">
         <li><a href="../games/inserirGames.jsp"> InserirGames</a></li>

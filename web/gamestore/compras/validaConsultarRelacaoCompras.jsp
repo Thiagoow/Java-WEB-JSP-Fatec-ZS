@@ -40,7 +40,7 @@
                 <td><%=listPurchases.getId_clients()%></td>
                 <td><%=listPurchases.getTotal_value()%></td>
                 <td><%=listPurchases.getName_clientes()%></td>
-                <% if (usuLogado.getTipo().equals("ADM")) { %>
+                <% if (usuLogado.getType().equals("ADM")) { %>
                 <td>
                     <a href="excluirRelacaoCompras.jsp?<%=url + listPurchases.getId()%>">Excluir</a>
                 </td>

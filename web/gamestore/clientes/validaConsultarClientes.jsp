@@ -36,7 +36,7 @@
                 <td><%=listaClients.getCpf()%></td>
                 <td><%=listaClients.getUsername()%></td>
                 <td><%=listaClients.getEmail()%></td>
-                <% if (usuLogado.getTipo().equals("ADM")) { %>
+                <% if (usuLogado.getType().equals("ADM")) { %>
                 <td>
                     <a href="excluirClientes.jsp?<%=url + listaClients.getId()%>">Excluir</a>
                 </td>
