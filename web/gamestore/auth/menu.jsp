@@ -6,7 +6,7 @@
     String login = request.getParameter("LOGIN");
     String senha = request.getParameter("SENHA");
 
-    Clients usuEntrada = new Cliente(login, senha);
+    Clients usuEntrada = new Clients(login, senha);
     ClientsController usucont = new ClientsController();
     Clients usuSaida = usucont.validateWeb(usuEntrada);
 
