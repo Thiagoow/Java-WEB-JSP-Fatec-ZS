@@ -1,18 +1,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.List"%>
-<%@page import="gamestore.model.bean.Clientes"%>
-<%@page import="gamestore.controller.ControllerClientes"%>
-<%@page import="gamestore.model.bean.Instrumentos"%>
-<%@page import="gamestore.controller.ControllerInstrumentos"%>
+<%@page import="gamestore.model.bean.Clients"%>
+<%@page import="gamestore.controller.ClientsController"%>
+<%@page import="gamestore.model.bean.Games"%>
+<%@page import="gamestore.controller.GamesController"%>
 
 <%
-    ControllerInstrumentos insCont = new ControllerInstrumentos();
-    Instrumentos ins = new Instrumentos("");
-    List<Instrumentos> inst = insCont.listar(ins);
+    GamesController gmsCont = new GamesController();
+    Games ins = new Games("");
+    List<Games> inst = gmsCont.list(ins);
 
-    ControllerClientes cliCont = new ControllerClientes();
-    Clientes cliEnt = new Clientes("");
-    List<Clientes> clie = cliCont.listar(cliEnt);
+    ClientsController cliCont = new ClientsController();
+    Clients cliEnt = new Clients("");
+    List<Clients> clie = cliCont.list(cliEnt);
 %>
 
 <html>
@@ -28,7 +28,7 @@
                         <td>
                             <select NAME ="ID_GAMES" class="browser-default">
                                 <% for (Games ins_ : inst) { %>
-                                    <option value="<%=ins_.getId()%>"><%=ins_.getNome()%></option>
+                                    <option value="<%=ins_.getId()%>"><%=ins_.getName()%></option>
                                 <% } %>
                             </select> 
                         </td>
@@ -36,9 +36,9 @@
                     <tr>
                         <td>Clientes:</td>
                         <td>
-                            <select NAME="ID_CLIENTES" class="browser-default">
-                                <% for (Clientes cli : clie) { %>
-                                    <option value="<%=cli.getId()%>"><%=cli.getNome()%></option>
+                            <select NAME="ID_CLIENTS" class="browser-default">
+                                <% for (Clients cli : clie) { %>
+                                    <option value="<%=cli.getId()%>"><%=cli.getName()%></option>
                                 <% } %>
                             </select> 
                         </td>

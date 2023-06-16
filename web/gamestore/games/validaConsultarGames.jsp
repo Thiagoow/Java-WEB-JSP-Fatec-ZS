@@ -1,10 +1,10 @@
 <%@page import="java.util.List"%> <%@page contentType="text/html"
 pageEncoding="UTF-8"%> <%@page import="gamestore.model.bean.Usuario"%> <%@page
 import="gamestore.model.bean.Games"%> <%@page
-import="gamestore.controller.ControllerGames"%> <% String nome =
-request.getParameter("NOME"); Games cli = new Games(nome); ControllerGames
-inscont = new ControllerGames(); List<Games>
-  inst = inscont.listar(cli); Usuario usuLogado = (Usuario)
+import="gamestore.controller.GamesController"%> <% String nome =
+request.getParameter("NOME"); Games cli = new Games(nome); GamesController
+gmsCont = new GamesController(); List<Games>
+  inst = gmsCont.list(cli); Usuario usuLogado = (Usuario)
   session.getAttribute("ClientLogged"); String url = "PBUSCA=" + nome + "&ID=";
   %>
 
@@ -28,7 +28,7 @@ inscont = new ControllerGames(); List<Games>
           <% for (Games listaGames : inst) {%>
           <tr>
             <td><%=listaGames.getId()%></td>
-            <td><%=listaGames.getNome()%></td>
+            <td><%=listaGames.getName()%></td>
             <td><%=listaGames.getValor()%></td>
             <td><%=listaGames.getTipo()%></td>
             <% if (usuLogado.getTipo().equals("ADM")) {%>
